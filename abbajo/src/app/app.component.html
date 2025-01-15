@@ -104,7 +104,9 @@
     <div>
       <h2 class="text-xl font-semibold mb-2">Results</h2>
       <ul class="list-disc pl-5 space-y-1">
-        <li *ngFor="let post of filteredPosts">{{ post }}</li>
+        @for (post of filteredPosts; track post) {
+          <li>{{ post }}</li>
+        }
       </ul>
     </div>
   
